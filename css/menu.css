@@ -1,0 +1,99 @@
+.primary-nav-trigger .menu-icon {
+    display: inline-block;
+    position: absolute;
+    left: 20%;
+    top: 50%;
+    width: 39px;
+    height: 2px;
+    background-color: #011638;
+}
+
+.primary-nav-trigger .menu-icon::before, .primary-nav-trigger .menu-icon::after {
+    content: " ";
+    position: absolute;
+    background-color: #011638;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    transition:  transform .3s, top .3s;
+}
+
+.primary-nav-trigger .menu-icon::before {
+    top: -9px;
+}
+
+.primary-nav-trigger .menu-icon::before {
+    top: 9px;
+}
+
+.primary-nav-trigger {
+    position: absolute;
+    right: 20%;
+    top: 0;
+    height: 100%;
+    width: 60px;
+}
+
+.primary-nav-trigger .menu-icon.is-clicked {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.primary-nav-trigger .menu-icon.menu-icon.is-clicked::before {
+    top: 0;
+    transform: rotate(135deg);
+}
+
+.primary-nav-trigger .menu-icon.menu-icon.is-clicked::after {
+    top: 0;
+    transform: rotate(255deg);
+}
+
+.primary-nav {
+    z-index: 9999;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    padding: 150px 0 0;
+    background: rgba(0, 0, 0, 0.96);
+    text-align: center;
+    backface-visibility: hidden;
+    overflow: auto;
+    transform: translateY(-100%);
+    transition-property: transform;
+    transition-duration: 0.4s;
+}
+
+.primary-nav li {
+    font-weight: 300;
+    margin: .2em 0;
+    font-size: 30px;
+    text-transform: capitalize;
+}
+
+.primary-nav.is-visible {
+    transform: translateY(0);
+}
+
+.primary-nav a {
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 20px 1em;
+    border-radius: 0.25em;
+    transition: background 0.2s;
+    color: #fff;
+    font-family:'Roboto Condensed', sans-serif;
+}
+
+.primary-nav a:hover {
+    background-color: #e36767;
+}
+
+.topheader.is-fixed{
+    height: 80px;
+}
+
+.topheader.is-fixed a {
+    margin-top: 0px;
+}
